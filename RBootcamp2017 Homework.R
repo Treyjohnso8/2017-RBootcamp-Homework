@@ -114,28 +114,34 @@ house <- c(4.8, 3.8, 5.7);
 #and so that in odd numbered years students 1 and 3 get trust fund disbursements of $5000. 
 #(hint the modulus function %% will be helpful )
 students<-c(1,2,3)
-years <- c( 2015, 2016, 2018, 2020)
+years <- c( 2015, 2016, 2017,2018,2019, 2020)
 for(ii in 1:length(years)){
-  if((students==1||students==3) && !(years[ii]%%2 ==0)){
-    bankAccounts<-bankAccounts+5
+  if(!(years[ii]%%2 ==0)){ #if its 1 or 3, and the year isnt divisible by 2
+    bankAccounts[c(1,3)]<-bankAccounts[c(1,3)]+5 #then those students get 5000
   }
-}
-print(bankAccounts)  
 bankAccounts<-(bankAccounts-house-food-fun+income)
-  for (j in 1:5) {
-    bankAccounts<-(bankAccounts-house-food-fun+income)
-    print(bankAccounts)
     for (i in 1:length(bankAccounts)) {
       bankAccounts[i] <- interestRate*bankAccounts[i] + bankAccounts[i]; }
     print(bankAccounts)
-  }
+}
 
   
 #Exercise 8) use a while loop to sum all numbers from 1:17. You will need to use a counter variable (like index seen in class).
-  
-  while (i<17){
-    i=i+i}
-  print(i)
-  
+i<-1
+sumi<-0
+while (i <= 17){
+  sumi<-i+sumi
+  i<-i+1
+}
+print(sumi)
+sum(1:17)
+
 #Exercise 9) write a function takes a number, and prints ‘small’ if number less than or equal to -1; ‘medium’ if between -1 and + 1’big’ if greater than or equal to + 1
-  
+i<- 2
+if (i <= (-1)){
+  cat("Small")
+} else if ((i > -1) && (i < 1)){
+  cat("Medium")
+} else{
+  cat("Big")
+}
