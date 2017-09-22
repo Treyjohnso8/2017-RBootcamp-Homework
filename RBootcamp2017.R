@@ -7,7 +7,11 @@
 
 #Exercise 1) Write a for loop statements so that it runs from 1:9 and prints the following output to your screen:
 
+
+
 #Exercise 2) Modify your for loop so that it prints 10 asterisks, with each asterisk separated by exactly one ampersand sign (&), with no spaces or new line characters.
+
+
 
 #Exercise 3) by hand, figure out the initial values of these variables and values at the the start and end of each iteration of the loop
 
@@ -27,6 +31,8 @@ for (i in -1:-4){
   bubbles <- i;
 }
 
+
+
 #Exercise 4) modify this code so that it will print out a message during presidential as well as congressional election years
 
 ###you can use the if statement with the modulus operator to conditionally perform operations
@@ -37,6 +43,8 @@ for(ii in 1:length(years)){
   }
   
 }
+
+
 
 #Exercise 5) More fun with loops. Here are the bank accounts from seven randomly selected UCLA grad students
 
@@ -50,6 +58,8 @@ for (i in 1:length(bankAccounts)) {
 
 HINT: variables must be initialized before you can perform operations on them
 HINT 2: look at the rep() function and see if you can use that to initialize a variable that will help you.
+
+
 
 #Exercise 6) Go back to the compounded interest example. 
 #Suppose we now want to compound the interest annually, but across a period of 5 years. 
@@ -70,6 +80,8 @@ for (j in 1:5) {
     #modify amounts in bankAccounts directly in step 1
   }
   
+  
+  
 #Exercise 7) Three students have estimated annual expenditures for food, housing, and fun of: (in thousands of dollars)
   house <- c(4.8, 3.8, 5.7); 
   food<- c(3.5, 4.3, 5.0); 
@@ -82,7 +94,11 @@ for (j in 1:5) {
 #and so that in odd numbered years students 1 and 3 get trust fund disbursements of $5000. 
 #(hint the modulus function %% will be helpful )
 
+  
+  
 #Exercise 8) use a while loop to sum all numbers from 1:17. You will need to use a counter variable (like index seen in class).
+  
+  
   
 #Exercise 9) write a function takes a number, and prints ‘small’ if number less than or equal to -1; ‘medium’ if between -1 and + 1’big’ if greater than or equal to + 1
   
