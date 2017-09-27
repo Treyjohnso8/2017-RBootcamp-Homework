@@ -72,6 +72,6 @@ par(mfrow=c(1,1), mar=c(4, 4, 3, 2))
 bin.names<-bins[-21]
 bin.names
 boundplots<-rbind(histhund,histthous)
-barplot(boundplots,col=c(2,4),beside=T,xlab="Value",ylab="Count",main="Counts",
+barplot(boundplots,col=c(2,4),beside=T,xlab="Average height (inches)",ylab="Count",
         names.arg = bin.names)
 legend(x=0,y=400,legend= c("n = 100","n = 1000"),col=c(2,4),pch = 19)
