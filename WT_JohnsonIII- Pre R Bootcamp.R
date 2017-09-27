@@ -398,12 +398,29 @@ while (k <= 100) {
 #Exercise 12.2.0.0.1
 phi <- 20
 conv <- FALSE
+counter<-1
 while (!conv) {
   phi.new <- 1+1/phi
   conv <- phi==phi.new
   phi <- phi.new
-  
+  counter<- counter+1
+  cat(phi,phi.new,conv)
 }
-phi.new#Revisit
+counter
+phi.new
+#it is working. it takes 41 iterations.
 
 #Exercise 12.2.0.0.2
+a <- 1.1
+b <- 0.001
+T <- seq(from=1,to=200,by=1)
+N <- numeric(length(T))
+n <- 2
+t <- 1
+while (t<=max(T)) {
+  n <- a*n/(1+b*n)
+  N[t] <- n
+  t<-t+1
+}
+plot(T,N) 
+#They are the same
