@@ -126,18 +126,24 @@ qqline(log_sort_pvals,col="red",lty=2)
 #frame called “zz”. The second column in this file contains the blood
 #glucose measurements. Hint: you probably want to use “header=T”
 #in the “read.table” command.
-zz<-read.table('pheno.sim.2014-2.txt',header=TRUE)
+table<-read.table('pheno.sim.2014-2.txt',header=TRUE)
+zz<-table[,2]
 head(zz)
-
 
 #b. Find the value of the phenotype such that 25% of the individuals
 #have a phenotype LESS than this value.
-?quantile()
+m.25 <- quantile(zz)[2] #25% of individuals are less than 4.768756
+m.25
 
 #c. Find the value of the phenotype such that 25% of the individuals
 #have a phenotype GREATER than this value (i.e. 75% of the
 #individuals have a phenotype LESS than this value).
+m.75 <- quantile(zz)[4] #75% of individuals are less than 7.35497
+m.75
 
 #d. Make a density plot of the distribution of phenotypes (i.e. the blood
 #glucose levels). Add vertical lines to the plot to denote the 25% and
 #75% tails of the distribution.
+plot(density(zz))
+abline(v=m.25,col='red')
+abline(v=m.75,col='blue')
