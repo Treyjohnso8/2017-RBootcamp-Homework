@@ -71,6 +71,7 @@ dev.off()
 kk<-1000
 nVec<-rickerfunction(20,0.5,1000)
 nmin<-min(which(nVec>=kk/2));nmin
+nVec[nn==1]
 
 #(e) Write a script that runs the necessary simulations and collects the necessary
 #data to plot how tK/2 depends on r, for the range of r from 0.1 to 0.9.
